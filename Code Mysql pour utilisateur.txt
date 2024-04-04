@@ -1,0 +1,52 @@
+
+
+Les privilège de pour les différents utilisateurs
+
+GRANT Select, insert, update on equipement to `Technicien`@localhost;
+GRANT Select, insert, update on `equipement-vulnerabilites` to `Technicien`@localhost;
+GRANT Select, insert, update on `actif-menace` to `Technicien`@localhost;
+GRANT Select, insert, update on impact to `Technicien`@localhost;
+GRANT Select, insert, update on incident to `Technicien`@localhost;
+GRANT Select, insert, update on maintenance to `Technicien`@localhost;
+GRANT Select, insert, update on menace to `Technicien`@localhost;
+GRANT Select, insert, update on prestataire to `Technicien`@localhost;
+GRANT Select, insert, update on testfaille to `Technicien`@localhost;
+GRANT Select, insert, update on todolist to `Technicien`@localhost;
+GRANT Select, insert, update on vulnerabilites to `Technicien`@localhost;
+
+GRANT all PRIVILEGES on equipement to `Administrateur`@localhost;
+GRANT all PRIVILEGES on `equipement-vulnerabilites` to `Administrateur`@localhost;
+GRANT all PRIVILEGES on `actif-menace` to `Administrateur`@localhost;
+GRANT all PRIVILEGES on impact to `Administrateur`@localhost;
+GRANT all PRIVILEGES on incident to `Administrateur`@localhost;
+GRANT all PRIVILEGES on maintenance to `Administrateur`@localhost;
+GRANT all PRIVILEGES on menace to `Administrateur`@localhost;
+GRANT all PRIVILEGES on prestataire to `Administrateur`@localhost;
+GRANT all PRIVILEGES on testfaille to `Administrateur`@localhost;
+GRANT all PRIVILEGES on todolist to `Administrateur`@localhost;
+GRANT all PRIVILEGES on acces to `Administrateur`@localhost;
+GRANT all PRIVILEGES on actif to `Administrateur`@localhost;
+GRANT all PRIVILEGES on personnel to `Administrateur`@localhost;
+GRANT all PRIVILEGES on fonction to `Administrateur`@localhost;
+GRANT all PRIVILEGES on vulnerabilites to `Administrateur`@localhost;
+
+GRANT SELECT on testfaille to `TechGuard`@localhost;
+GRANT SELECT on maintenance to `TechGuard`@localhost;
+GRANT SELECT on maintenance to `InnoTech`@localhost;
+GRANT SELECT on testfaille to `InnoTech`@localhost;
+
+Remplacer les username et pasword par ce qu'il ya ici;
+
+création de compte pour php my admin  :
+utilisateur : Administrateur
+mdp : projetppe58
+utilisateur : Technicien
+mdp : leprojetdusiecle123
+utilisateur : TechGuard
+mdp : prestateirefaille123
+utilisateur : InnoTech
+mdp : prestatairemaintenance123
+
+CREATE USER 'USERNAME'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'USERNAME'@'localhost' 
+REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
